@@ -38,18 +38,26 @@ const DCandidates = ({ classes, ...props }) => {
     }
     return (
         <Paper className={classes.paper} elevation={3}>
-            <Grid container>
+            <Grid container spacing={0} direction="column" alignItems="center" 
+            justifyContent="center" sx={{ minHeight: '100vh' }}>
                 <Grid item xs={6}>
                     <DCandidateForm {...({ currentId, setCurrentId })} />
                 </Grid>
-                <Grid item xs={6}>
+            </Grid>
+            
+            <Grid container spacing={0} direction="column" alignItems="center" 
+            justifyContent="center" sx={{ minHeight: '100vh' }}>
+            <Grid item xs={8}>
                     <TableContainer>
                         <Table>
                             <TableHead className={classes.root}>
                                 <TableRow>
                                     <TableCell>Name</TableCell>
                                     <TableCell>Mobile</TableCell>
-                                    <TableCell>Blood Group</TableCell>
+                                    <TableCell>Gender</TableCell>
+                                    <TableCell>Age</TableCell>
+                                    <TableCell>Email</TableCell>
+                                    <TableCell>Remark</TableCell>
                                     <TableCell></TableCell>
                                 </TableRow>
                             </TableHead>
@@ -60,6 +68,9 @@ const DCandidates = ({ classes, ...props }) => {
                                             <TableCell>{record.fullName}</TableCell>
                                             <TableCell>{record.mobile}</TableCell>
                                             <TableCell>{record.gender}</TableCell>
+                                            <TableCell>{record.age}</TableCell>
+                                            <TableCell>{record.email}</TableCell>
+                                            <TableCell>{record.address}</TableCell>
                                             <TableCell>
                                                 <ButtonGroup variant="text">
                                                     <Button><EditIcon color="primary"

@@ -153,7 +153,7 @@ const DCandidateForm = ({ classes, ...props }) => {
                     <TextField
                         name="address"
                         variant="outlined"
-                        label="Address"
+                        label="Remark"
                         value={values.address}
                         onChange={handleInputChange}
                     />
