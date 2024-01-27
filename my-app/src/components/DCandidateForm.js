@@ -26,7 +26,7 @@ const initialFieldValues = {
     mobile: '',
     email: '',
     age: '',
-    bloodGroup: '',
+    gender: '',
     address: ''
 }
 
@@ -44,8 +44,8 @@ const DCandidateForm = ({ classes, ...props }) => {
             temp.fullName = fieldValues.fullName ? "" : "This field is required."
         if ('mobile' in fieldValues)
             temp.mobile = fieldValues.mobile ? "" : "This field is required."
-        if ('bloodGroup' in fieldValues)
-            temp.bloodGroup = fieldValues.bloodGroup ? "" : "This field is required."
+        if ('gender' in fieldValues)
+            temp.gender = fieldValues.gender ? "" : "This field is required."
         if ('email' in fieldValues)
             temp.email = (/^$|.+@.+..+/).test(fieldValues.email) ? "" : "Email is not valid."
         setErrors({
@@ -117,26 +117,20 @@ const DCandidateForm = ({ classes, ...props }) => {
                     />
                     <FormControl variant="outlined"
                         className={classes.formControl}
-                        {...(errors.bloodGroup && { error: true })}
+                        {...(errors.gender && { error: true })}
                     >
-                        <InputLabel ref={inputLabel}>Blood Group</InputLabel>
+                        <InputLabel ref={inputLabel}>Gender</InputLabel>
                         <Select
-                            name="bloodGroup"
-                            value={values.bloodGroup}
+                            name="gender"
+                            value={values.gender}
                             onChange={handleInputChange}
                             labelWidth={labelWidth}
                         >
-                            <MenuItem value="">Select Blood Group</MenuItem>
-                            <MenuItem value="A+">A +ve</MenuItem>
-                            <MenuItem value="A-">A -ve</MenuItem>
-                            <MenuItem value="B+">B +ve</MenuItem>
-                            <MenuItem value="B-">B -ve</MenuItem>
-                            <MenuItem value="AB+">AB +ve</MenuItem>
-                            <MenuItem value="AB-">AB -ve</MenuItem>
-                            <MenuItem value="O+">O +ve</MenuItem>
-                            <MenuItem value="O-">O -ve</MenuItem>
+                            <MenuItem value="">Select Gender</MenuItem>
+                            <MenuItem value="Male">Male</MenuItem>
+                            <MenuItem value="Female">Female</MenuItem>
                         </Select>
-                        {errors.bloodGroup && <FormHelperText>{errors.bloodGroup}</FormHelperText>}
+                        {errors.gender && <FormHelperText>{errors.gender}</FormHelperText>}
                     </FormControl>
                 </Grid>
                 <Grid item xs={6}>

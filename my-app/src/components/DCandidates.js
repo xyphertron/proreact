@@ -59,7 +59,7 @@ const DCandidates = ({ classes, ...props }) => {
                                         return (<TableRow key={index} hover>
                                             <TableCell>{record.fullName}</TableCell>
                                             <TableCell>{record.mobile}</TableCell>
-                                            <TableCell>{record.bloodGroup}</TableCell>
+                                            <TableCell>{record.gender}</TableCell>
                                             <TableCell>
                                                 <ButtonGroup variant="text">
                                                     <Button><EditIcon color="primary"

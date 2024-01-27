@@ -11,7 +11,7 @@ using WebAPI.Models;
 namespace WebAPI.Migrations
 {
     [DbContext(typeof(DonationDBContext))]
-    [Migration("20240125080755_InitialCreate")]
+    [Migration("20240127065221_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -39,10 +39,6 @@ namespace WebAPI.Migrations
                     b.Property<int>("age")
                         .HasColumnType("int");
 
-                    b.Property<string>("bloodGroup")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(3)");
-
                     b.Property<string>("email")
                         .IsRequired()
                         .HasColumnType("nvarchar(100)");
@@ -50,6 +46,10 @@ namespace WebAPI.Migrations
                     b.Property<string>("fullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("gender")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("mobile")
                         .IsRequired()

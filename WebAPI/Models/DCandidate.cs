@@ -23,8 +23,8 @@ namespace WebAPI.Models
 
         public int age { get; set; }
 
-        [Column(TypeName = "nvarchar(3)")]
-        public string bloodGroup { get; set; }
+        [Column(TypeName = "nvarchar(10)")]
+        public string gender { get; set; }
 
         [Column(TypeName = "nvarchar(100)")]
         public string address { get; set; }

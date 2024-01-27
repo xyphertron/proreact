@@ -36,10 +36,6 @@ namespace WebAPI.Migrations
                     b.Property<int>("age")
                         .HasColumnType("int");
 
-                    b.Property<string>("bloodGroup")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(3)");
-
                     b.Property<string>("email")
                         .IsRequired()
                         .HasColumnType("nvarchar(100)");
@@ -47,6 +43,10 @@ namespace WebAPI.Migrations
                     b.Property<string>("fullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("gender")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("mobile")
                         .IsRequired()

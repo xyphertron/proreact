@@ -20,7 +20,7 @@ namespace WebAPI.Migrations
                     mobile = table.Column<string>(type: "nvarchar(16)", nullable: false),
                     email = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     age = table.Column<int>(type: "int", nullable: false),
-                    bloodGroup = table.Column<string>(type: "nvarchar(3)", nullable: false),
+                    gender = table.Column<string>(type: "nvarchar(10)", nullable: false),
                     address = table.Column<string>(type: "nvarchar(100)", nullable: false)
                 },
                 constraints: table =>
